@@ -18,6 +18,7 @@ const App = () => {
   const [timezone, setTimezone] = useState("")
   const [isp, setIsp] = useState("")
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(false)
 
   const { fetchMap } = useMapContext()
 
@@ -25,17 +26,29 @@ const App = () => {
     setLoading(true)
       axios.get(`https://geo.ipify.org/api/v2/country?apiKey=${API_KEY}&ipAddress=${ip}`)
         .then((res)=>{
-          setIp(res.data.ip)
-          setLocation(res.data.location)
-          setTimezone(res.data.location.timezone)
-          setIsp(res.data.isp)
-          setLoading(false)
-          fetchMap(location)
-          console.log(res)
+          if(res.data.location.country != "ZZ"){
+            setIp(res.data.ip)
+            setLocation(res.data.location)
+            setTimezone(res.data.location.timezone)
+            setIsp(res.data.isp)
+            setLoading(false)
+            fetchMap(location)
+            console.log(res)
+          } else {
+            setLoading(false)
+            setError(true)
+            console.log(error)
+          }
+          
         })
         .catch((err) => {
           console.log(err)
           setLoading(false)
+          setError(true)
+          setTimeout(() => {
+            setError(false)
+            setIp("")
+          }, 2000)
         })
   }
   useEffect(()=>{
@@ -45,7 +58,7 @@ const App = () => {
   return (
     <div className='App'>
           <Header/>
-          <Info ip={ip} location={location} timezone={timezone} isp={isp} loading={loading} getData={getData} setIp={setIp} />
+          <Info ip={ip} location={location} timezone={timezone} isp={isp} loading={loading} getData={getData} setIp={setIp} error={error}/>
           <Map location={location}/>
     </div>
   )

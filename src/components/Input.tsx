@@ -1,6 +1,6 @@
 import React from 'react'
 import arrow from '../img/icon-arrow.svg'
-import { useMapContext } from '../contexts/MapContext'
+import InputMask from 'react-input-mask';
 
 type InputProps = {
   getData: (ip: string) => void,
@@ -14,7 +14,7 @@ export const Input = ({getData, ip, setIp}: InputProps) => {
     <div className='flex w-[100%] mt-4
     h-14'>
         <input type="text" 
-        placeholder='Search for any IP address or domains'
+        placeholder={`Ex: 8.8.8.8`}
         className='w-[85%] rounded-l-2xl ml-[-1px] p-4 '
         value={ip}
         onChange={(e) => setIp(e.target.value)}

@@ -12,6 +12,7 @@ type info = {
     loading:boolean,
     getData: (ip: string) => void,
     setIp: React.Dispatch<React.SetStateAction<string>>,
+    error: boolean
 }
 
 export default info

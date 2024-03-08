@@ -2,8 +2,6 @@ import { MapContainer, TileLayer, useMap, Marker, Popup, useMapEvents, useMapEve
 import 'leaflet/dist/leaflet.css';
 import marker from '../img/icon-location.svg'
 import { useMapContext } from "../contexts/MapContext";
-import { useEffect } from 'react';
-
 
 type MapProps = {
   location: {
@@ -11,7 +9,6 @@ type MapProps = {
     region: string,
     timezone: string,
   },
-
 }
 
 
@@ -24,7 +21,6 @@ const Map = ({location}:MapProps) => {
     map.setView([lat, lon], map.getZoom())
     const mapEvent = useMapEvent('click', () => {
       map.setView([lat, lon], map.getZoom())
-
     })
         
 

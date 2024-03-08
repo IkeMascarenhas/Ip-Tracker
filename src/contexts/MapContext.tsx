@@ -23,11 +23,16 @@ const MapProvider = ({children} : MapProviderProps) => {
 
 
     const fetchMap = async (location:any) => {
-        const response = await fetch(`https://nominatim.openstreetmap.org/search?q=${location.region}&format=json`);
-        const data = await response.json();
-        console.log(data)
-        setLat(parseFloat(data[0].lat))
-        setLon(parseFloat(data[0].lon))
+        try{
+            const response = await fetch(`https://nominatim.openstreetmap.org/search?q=${location.region}&format=json`);
+            const data = await response.json();
+            console.log(data)
+            setLat(parseFloat(data[0].lat))
+            setLon(parseFloat(data[0].lon))
+        } catch(err) {
+            console.log(err)
+        }
+        
       }
 
     return (
