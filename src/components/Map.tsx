@@ -15,8 +15,8 @@ import { Icon } from 'leaflet';
 const markerMapIcon = new Icon ({
   iconUrl : markerMap,
   iconSize : [35,42], // size of the icon
-  iconAnchor : [22,94], // point of the icon which will correspond to marker's location
-  popupAnchor : [-3, -76] // point from which the popup should open relative to the iconAnchor
+  popupAnchor : [-3, -76] ,
+  // point from which the popup should open relative to the iconAnchor
 
 })
 
@@ -40,7 +40,7 @@ const Map = () => {
         />
         <Marker position={[lat, lon]} icon={markerMapIcon}>
           <Popup>
-            That's your location
+            That's your location.
           </Popup>
         </Marker>
       </>
@@ -49,7 +49,7 @@ const Map = () => {
   
 
   return (
-    <MapContainer center={[lat, lon]} zoom={13} scrollWheelZoom={true} style={{ height: 500 }} className='map'>
+    <MapContainer center={[lat, lon]} zoom={8} scrollWheelZoom={true} style={{ height: 500}} className='map' >
       <SetMapComponent />
     </MapContainer>
   )

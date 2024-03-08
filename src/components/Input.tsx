@@ -1,7 +1,6 @@
 import React from 'react'
 import arrow from '../img/icon-arrow.svg'
-import { useContext } from 'react'
-import { useMapContext } from '../contexts/MapContext'
+
 
 type InputProps = {
   getData: (ip: string) => void,
@@ -14,7 +13,7 @@ export const Input = ({getData, ip, setIp}: InputProps) => {
 
   return (
     <div className='flex w-[100%] mt-4
-    h-14 md:max-w-[500px] md:mx-auto'>
+    h-14 md:max-w-[400px] mx-auto'>
         <input type="text" 
         placeholder={`Ex: 8.8.8.8`}
         className='w-[85%] rounded-l-2xl ml-[-1px] p-4 '
