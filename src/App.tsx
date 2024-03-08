@@ -27,18 +27,17 @@ const App = () => {
         .then((res)=>{
           if(res.data.location.country != "ZZ"){
             setIp(res.data.ip)
+            
             setLocation(res.data.location)
+            
             setTimezone(res.data.location.timezone)
             setIsp(res.data.isp)
             setLoading(false)
-            fetchMap(location)
-            console.log(res)
           } else {
             setLoading(false)
             setError(true)
             console.log(error)
           }
-          
         })
         .catch((err) => {
           console.log(err)
@@ -49,10 +48,16 @@ const App = () => {
             setIp("")
           }, 2000)
         })
+        console.log(location)
   }
   useEffect(()=>{
     getData("")
+    fetchMap(location)
   }, [])
+
+  useEffect(() => {
+    fetchMap(location)
+  }, [timezone])
     
   return (
     <div className='App'>

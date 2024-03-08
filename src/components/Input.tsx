@@ -1,5 +1,7 @@
 import React from 'react'
 import arrow from '../img/icon-arrow.svg'
+import { useContext } from 'react'
+import { useMapContext } from '../contexts/MapContext'
 
 type InputProps = {
   getData: (ip: string) => void,
@@ -8,6 +10,7 @@ type InputProps = {
 }
 
 export const Input = ({getData, ip, setIp}: InputProps) => {
+
 
   return (
     <div className='flex w-[100%] mt-4

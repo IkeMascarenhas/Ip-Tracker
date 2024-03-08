@@ -1,6 +1,8 @@
 import { MapContainer, TileLayer, useMap, Marker, Popup, useMapEvent } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 import { useMapContext } from "../contexts/MapContext";
+import markerMap from '../img/icon-location.svg'
+import { Icon } from 'leaflet';
 
 // type MapProps = {
 //   location: {
@@ -10,6 +12,13 @@ import { useMapContext } from "../contexts/MapContext";
 //   },
 // }
 
+const markerMapIcon = new Icon ({
+  iconUrl : markerMap,
+  iconSize : [35,42], // size of the icon
+  iconAnchor : [22,94], // point of the icon which will correspond to marker's location
+  popupAnchor : [-3, -76] // point from which the popup should open relative to the iconAnchor
+
+})
 
 const Map = () => {
 
@@ -29,7 +38,7 @@ const Map = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={[lat, lon]}>
+        <Marker position={[lat, lon]} icon={markerMapIcon}>
           <Popup>
             That's your location
           </Popup>
