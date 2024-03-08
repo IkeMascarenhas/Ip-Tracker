@@ -4,7 +4,7 @@ import info from '../types/info'
 const Info = ({ ip, location, isp, timezone, loading, getData, setIp, error }: info) => {
 
     return (
-        <section className='w-5/6 m-auto flex flex-col gap-6 centerInfo md:max-w-[850px]'>
+        <section className='w-5/6 m-auto flex flex-col gap-4 centerInfo md:max-w-[850px]'>
 
             <Input getData={getData} setIp={setIp} ip={ip} />
             <ul className='bg-white rounded-2xl flex flex-col gap-4 items-center justify-center p-5 min-h-[300px] md:flex-row md:min-h-[150px] md:gap-1 md:justify-around md:p-0'>

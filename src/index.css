@@ -46,7 +46,7 @@ html, body{
 .map{
     z-index: 0 !important;
     width: 100vw !important;
-    max-height: 52.5vh;
+    max-height: 53vh;
     position: absolute !important;
     bottom: 0;
     left: 0;

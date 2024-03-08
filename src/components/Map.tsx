@@ -41,7 +41,7 @@ const Map = ({location}:MapProps) => {
   
 
   return (
-    <MapContainer center={[lat, lon]} zoom={10} scrollWheelZoom={true} style={{ height: 500 }} className='map'>
+    <MapContainer center={[lat, lon]} zoom={13} scrollWheelZoom={true} style={{ height: 500 }} className='map'>
       <SetMapComponent />
     </MapContainer>
   )
