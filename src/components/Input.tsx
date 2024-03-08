@@ -14,7 +14,7 @@ export const Input = ({getData, ip, setIp}: InputProps) => {
 
   return (
     <div className='flex w-[100%] mt-4
-    h-14'>
+    h-14 md:max-w-[500px] md:mx-auto'>
         <input type="text" 
         placeholder={`Ex: 8.8.8.8`}
         className='w-[85%] rounded-l-2xl ml-[-1px] p-4 '
