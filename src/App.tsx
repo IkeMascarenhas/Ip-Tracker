@@ -1,9 +1,8 @@
 import Header from './components/Header'
 import Info from './components/Info'
-import { useState, useEffect, useContext} from 'react'
+import { useState, useEffect} from 'react'
 import axios from 'axios'
 import Map from './components/Map'
-import { useMap } from 'react-leaflet'
 import { useMapContext } from './contexts/MapContext'
 
 
@@ -59,7 +58,7 @@ const App = () => {
     <div className='App'>
           <Header/>
           <Info ip={ip} location={location} timezone={timezone} isp={isp} loading={loading} getData={getData} setIp={setIp} error={error}/>
-          <Map location={location}/>
+          <Map />
     </div>
   )
 }

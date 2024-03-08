@@ -21,18 +21,18 @@ const Info = ({ ip, location, isp, timezone, loading, getData, setIp, error }: i
                                 <h2 className='text-xs font-bold text-very-dark-gray text-center'>IP ADDRESS</h2>
                                 <p className='text-center font-bold text-lg'>{ip}</p>
                             </li>
-                            <span className=' hidden md:divider'></span>
+                            <span className=' hidden divider'></span>
                             <li>
                                 <h2 className='text-xs font-bold text-very-dark-gray text-center'>LOCATION</h2>
                                 <p className='text-center font-bold text-lg'>{`${location.region}, ${location.country}`}</p>
                             </li>
-                            <span className=' hidden md:divider'></span>
+                            <span className=' hidden divider'></span>
 
                             <li>
                                 <h2 className='text-xs font-bold text-very-dark-gray text-center'>TIMEZONE</h2>
                                 <p className='text-center font-bold text-lg'>UTC{timezone}</p>
                             </li>
-                            <span className=' hidden md:divider'></span>
+                            <span className=' hidden divider'></span>
 
                             <li className='flex flex-col items-center gap-1'>
                                 <h2 className='text-xs font-bold text-very-dark-gray text-center'>ISP</h2>

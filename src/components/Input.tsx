@@ -1,6 +1,5 @@
 import React from 'react'
 import arrow from '../img/icon-arrow.svg'
-import InputMask from 'react-input-mask';
 
 type InputProps = {
   getData: (ip: string) => void,

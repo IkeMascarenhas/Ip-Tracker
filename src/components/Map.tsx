@@ -1,25 +1,24 @@
-import { MapContainer, TileLayer, useMap, Marker, Popup, useMapEvents, useMapEvent } from 'react-leaflet'
+import { MapContainer, TileLayer, useMap, Marker, Popup, useMapEvent } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
-import marker from '../img/icon-location.svg'
 import { useMapContext } from "../contexts/MapContext";
 
-type MapProps = {
-  location: {
-    country: string,
-    region: string,
-    timezone: string,
-  },
-}
+// type MapProps = {
+//   location: {
+//     country: string,
+//     region: string,
+//     timezone: string,
+//   },
+// }
 
 
-const Map = ({location}:MapProps) => {
+const Map = () => {
 
-  const {lat, setLat, lon, setLon, fetchMap} = useMapContext()
+  const {lat, lon} = useMapContext()
   
   function SetMapComponent() {
     const map = useMap()
     map.setView([lat, lon], map.getZoom())
-    const mapEvent = useMapEvent('click', () => {
+    useMapEvent('click', () => {
       map.setView([lat, lon], map.getZoom())
     })
         
