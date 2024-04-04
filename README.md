@@ -4,11 +4,9 @@
 
 - [Overview](#overview)
   - [O desafio](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
   - [Construído com](#built-with)
   - [O que eu aprendi](#what-i-learned)
-  - [Recursos úteis](#useful-resources)
 
 ### O desafio
 
