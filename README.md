@@ -19,9 +19,6 @@ Os usuários devem conseguir:
 - Search for any IP addresses or domains and see the key information and location
 - Buscar qualquer endereço IP e ver as informações e localização no mapa
 
-### Screenshot
-
-![](./screenshot.jpg)
 
 ### Links
 
