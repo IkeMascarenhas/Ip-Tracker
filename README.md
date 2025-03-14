@@ -14,7 +14,6 @@ Os usuários devem conseguir:
 
 - Ver o layout otimizado para Mobile (480px) e Desktop (1440px)
 - Ver o seu próprio endereço IP quando a página carregar
-- Search for any IP addresses or domains and see the key information and location
 - Buscar qualquer endereço IP e ver as informações e localização no mapa
 
 
